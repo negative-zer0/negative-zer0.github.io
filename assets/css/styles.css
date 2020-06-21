@@ -1,0 +1,65 @@
+#bg-animation {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  color: white;
+  clip-path: circle(135.5% at 7% 0);
+  animation-duration: 2s;
+  animation: 10s anim-1 infinite, 2s anim-2;
+}
+
+@keyframes anim-1 {}
+
+:root {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+@keyframes anim-1 {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes anim-2 {
+  0% {
+    clip-path: circle(0% at 0 0);
+  }
+  100% {
+    clip-path: circle(135.5% at 7% 0);
+  }
+}
+
+#btn-style {
+  border: none;
+  background: transparent;
+  border: 1px solid white;
+  transition: .3s;
+}
+
+#btn-style:hover {
+  color: rgb(94,119,255);
+  border-color: rgb(94,119,255);
+  background-color: rgb(94,119,255);
+  color: white;
+  box-shadow: 0px 3px 6px 1px rgba(0,0,0,0.25);
+}
+
+#btn-style:active {
+  background-color: rgb(70,88,190);
+  color: rgb(205,205,205);
+  outline: none!important;
+}
+
+#btn-style:focus {
+  outline: none!important;
+}
+
